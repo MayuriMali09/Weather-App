@@ -9,7 +9,6 @@ class WeatherScreen extends StatefulWidget {
   @override
   State<WeatherScreen> createState() => _WeatherScreenState();
 }
-
 class _WeatherScreenState extends State<WeatherScreen> {
 
   Future <Map<String,dynamic>> getCurrentWeather() async{
@@ -58,7 +57,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
           if(snapshot.hasError){
             return Text(snapshot.error.toString());
           }
-
           final data=snapshot.data!;
           final currentWeatherData=data['list'][0];
           final currentTemp = currentWeatherData['main']['temp'];
